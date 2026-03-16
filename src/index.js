@@ -1,6 +1,22 @@
+function displayPoem(response) {
+  new Typewriter("#poem", {
+    strings: response.data.answer,
+    autoStart: true,
+    delay: 1,
+  });
+}
+
 function generatePoem(event) {
   event.preventDefault();
 
+  let promptInput = document.querySelector("#user-prompt");
+  let apiKey = "a9f2b6a7f83210eb03od0ab344b8t656";
+  let prompt = `User instructions: Generate a poem about ${promptInput.value}`;
+  let context =
+    "You are a poet who is great at making up 4-line poems from a user prompt. Be polite and follow the user instructions to create your poem in basic HTML";
+  let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  axios.get(apiURL).then(displayPoem);
   new Typewriter("#poem", {
     strings: "Watch your poem appear here...",
     autoStart: true,
