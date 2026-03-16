@@ -7,36 +7,39 @@
     <title>AI poem generator</title>
   </head>
   <body>
-    <header>
-      <h1>Poems!</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter an idea..."
-          autofocus
-          required
-          autocomplete="off"
-        />
-        <input type="submit" />
-      </form>
-      <div>Watch your poem appear here!</div>
-    </main>
+    <div class="container">
+      <header>
+        <h1>Poems!</h1>
+      </header>
+      <main>
+        <form>
+          <input
+            type="text"
+            placeholder="Enter an idea..."
+            autofocus
+            required
+            autocomplete="off"
+            class="prompt"
+          />
+          <input type="submit" class="button" />
+        </form>
+        <div class="returned-poem">Watch your poem appear here!</div>
+      </main>
 
-    <footer>
-      This project is coded by Laura Brennan and is open-sourced on
-      <a
-        href="https://github.com/LaBren90/SheCodes-poem-generator"
-        target="_blank"
-        >GitHub</a
-      >
-      and is hosted on
-      <a href="https://papaya-faloodeh-0769ca.netlify.app/" target="_blank"
-        >Netlify</a
-      >
-      .
-    </footer>
+      <footer>
+        This project is coded by Laura Brennan and is open-sourced on
+        <a
+          href="https://github.com/LaBren90/SheCodes-poem-generator"
+          target="_blank"
+          >GitHub</a
+        >
+        and is hosted on
+        <a href="https://papaya-faloodeh-0769ca.netlify.app/" target="_blank"
+          >Netlify</a
+        >
+        .
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
