@@ -57,3 +57,16 @@ footer {
   font-size: 13px;
   text-align: center;
 }
+
+.hidden {
+  display: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
+.animate-flicker {
+  animation: fadeIn 0.5s infinite alternate;
+}
